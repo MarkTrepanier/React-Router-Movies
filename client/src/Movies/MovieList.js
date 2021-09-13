@@ -11,14 +11,19 @@ export default function MovieList(props) {
   );
 }
 
+
 function MovieDetails(props) {
   const { title, director, metascore } = props.movie;
+  
+
+  const history = useHistory();
+  const routeToMovie = () => {
+    history.push(`/movies/${props.movie.id}`)
+  }
 
   return (
-    <div className="movie-card" onClick={()=>{
-      useHistory.push(`/movies/${props.key}`)
-    }} >
-      <h2>{title}</h2>
+    <div className="movie-card" onClick={routeToMovie} >
+      <h2>{title} and {props.movie.id}</h2>
       <div className="movie-director">
         Director: <em>{director}</em>
       </div>
