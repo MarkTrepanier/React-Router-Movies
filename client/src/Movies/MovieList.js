@@ -23,7 +23,7 @@ function MovieDetails(props) {
 
   return (
     <div className="movie-card" onClick={routeToMovie} >
-      <h2>{title}, id: {props.movie.id}</h2>
+      <h2>{title}</h2>
       <div className="movie-director">
         Director: <em>{director}</em>
       </div>
