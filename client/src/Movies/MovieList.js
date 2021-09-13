@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
 export default function MovieList(props) {
   return (
@@ -14,7 +15,9 @@ function MovieDetails(props) {
   const { title, director, metascore } = props.movie;
 
   return (
-    <div className="movie-card">
+    <div className="movie-card" onClick={()=>{
+      useHistory.push(`/movies/${props.key}`)
+    }} >
       <h2>{title}</h2>
       <div className="movie-director">
         Director: <em>{director}</em>
