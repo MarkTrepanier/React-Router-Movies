@@ -35,7 +35,7 @@ export default function App () {
     <div>
       <SavedList list={[ /* This is stretch */]} />
       <Movie id = {movieList}/>
-      <div>Just a moment while mark works on this.</div>{/*todo*/}
+      <div>Just a moment while mark works on this.</div>{/*todo, replace this with routes*/}
     </div>
   );
 }
